@@ -11,4 +11,16 @@ public class SvgScene {
 
     }
 
+    public void toSvg() {
+
+        StringBuilder polygonsString  = new StringBuilder();
+        for(var polygon: polygons) {
+
+            polygonsString.append(polygon.toSvg() + "\n");
+
+        }
+        return String.format();
+
+    }
+
 }
