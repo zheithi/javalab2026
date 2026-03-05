@@ -10,10 +10,9 @@ public class Main {
         points[4] = new Point(93.1F, 89.4F);
 
         Polygon polygon = new Polygon(points);
-        points[2]=new Point(3,7);
-        Polygon tempPolygon = new Polygon(polygon);
+        points[2].setX(1000);
 
-        System.out.println(tempPolygon.toSvg());
+        System.out.println(polygon.toSvg());
 
     }
 

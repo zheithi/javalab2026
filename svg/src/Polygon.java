@@ -6,8 +6,12 @@ public class Polygon {
     private Point[] array;
 
     public Polygon(Point[] points) {
-        this.array=new Point[points.length];
-        System.arraycopy(points, 0, this.array, 0, points.length);
+        this.array = new Point[points.length];
+
+        for(int i = 0; i < points.length; ++i) {
+            this.array[i] = new Point(points[i]);
+        }
+        //System.arraycopy(points, 0, this.points, 0, points.length);
     }
     public Polygon(Polygon p){
         this(p.array);
