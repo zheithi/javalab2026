@@ -10,13 +10,18 @@ public class Point {
         this.y = y;
 
     } // constructor
-
     public Point() {
 
         this.x = 0.0f;
         this.y = 0.0f;
 
     }                 // constructor
+    public Point(Point p) {
+
+        this.x = p.getX();
+        this.y = p.getY();
+
+    }          // copy constructor
 
     @Override
     public String toString() {
@@ -30,7 +35,6 @@ public class Point {
         this.x = x;
 
     }
-
     public void setY(float y) {
 
         this.y = y;
@@ -42,7 +46,6 @@ public class Point {
         return x;
 
     }
-
     public float getY() {
 
         return y;

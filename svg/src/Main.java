@@ -2,24 +2,18 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Point point = new Point();
-        point.setX(3.5F); point.setY(7.1F);
+        Point[] points = new Point[5];
+        points[0] = new Point(36.1F, 64.4F);
+        points[1] = new Point(26.2F, 73.4F);
+        points[2] = new Point(18.1F, 81.4F);
+        points[3] = new Point(74.1F, 65.4F);
+        points[4] = new Point(93.1F, 89.4F);
 
-        System.out.println(point.toSvg());
+        Polygon polygon = new Polygon(points);
+        points[2]=new Point(3,7);
+        Polygon tempPolygon = new Polygon(polygon);
 
-        point.translate(2, 4);
-        System.out.println(point.toSvg());
-
-        Point point2 = point.translated(3.5F, 6.1F);
-        System.out.println(point2.toSvg());
-
-        Segment segment = new Segment();
-        segment.p = point; segment.q = point2;
-
-        System.out.println(segment.length());
-
-
-        Segment[] segments = new Segment[5];
+        System.out.println(tempPolygon.toSvg());
 
     }
 
