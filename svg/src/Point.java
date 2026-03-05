@@ -2,7 +2,7 @@ import java.util.Locale;
 
 public class Point {
 
-    public float x, y;
+    private float x, y;
 
     public Point(float x, float y) {
 
