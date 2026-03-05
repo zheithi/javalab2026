@@ -3,31 +3,31 @@ import java.util.Locale;
 
 public class Polygon {
 
-    private Point[] array;
+    private Point[] points;
 
     public Polygon(Point[] points) {
-        this.array = new Point[points.length];
+        this.points = new Point[points.length];
 
         for(int i = 0; i < points.length; ++i) {
-            this.array[i] = new Point(points[i]);
+            this.points[i] = new Point(points[i]);
         }
         //System.arraycopy(points, 0, this.points, 0, points.length);
     }
     public Polygon(Polygon p){
-        this(p.array);
+        this(p.points);
     }
 
     @Override
     public String toString() {
 
-        return "Polygon{" + "array=" + Arrays.toString(array) + '}';
+        return "Polygon{" + "array=" + Arrays.toString(points) + '}';
 
     }
     public String toSvg() {
 
         StringBuilder pointString = new StringBuilder();
 
-        for (Point point : array) {
+        for (Point point : points) {
 
             pointString.append(point.getX()).append(",").append(point.getY()).append(" ");
 
