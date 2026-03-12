@@ -33,6 +33,14 @@ public class Main {
         scene1.addPolygon(triangle1);
         scene1.addPolygon(triangle2);
 
+        scene1.addPolygon(
+                Polygon.square(new Segment(
+                                new Point(130.0f, 100.0f), new Point(100.0f, 140.0f)
+                        ),
+                        new Style("red", "green", 3.0)
+                )
+        );
+
         System.out.println(scene1.toSvg());
         scene1.save("/home/student/Pulpit/Fortnite.svg");
 
