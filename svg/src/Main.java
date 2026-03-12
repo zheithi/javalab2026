@@ -1,6 +1,8 @@
+import java.io.IOException;
+
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         Point[] points = new Point[5]; {
             points[0] = new Point(36.1F, 64.4F);
@@ -31,7 +33,8 @@ public class Main {
         scene1.addPolygon(triangle1);
         scene1.addPolygon(triangle2);
 
-        System.out.println(polygon.toSvg());
+        System.out.println(scene1.toSvg());
+        scene1.save("/home/student/Pulpit/Fortnite.svg");
 
     }
 

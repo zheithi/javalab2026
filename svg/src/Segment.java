@@ -1,6 +1,7 @@
 public class Segment {
 
-    private Point p, q;
+        private final Point p, q;
+
     public Segment(Point p, Point q) {
 
         this.p = p; this.q = q;

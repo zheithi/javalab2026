@@ -3,7 +3,7 @@ import java.util.Locale;
 
 public class Polygon {
 
-    private Point[] points;
+        private final Point[] points;
 
     public Polygon(Point[] points) {
         this.points = new Point[points.length];
