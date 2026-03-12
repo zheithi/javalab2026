@@ -1,11 +1,9 @@
 import java.util.Arrays;
 import java.util.Locale;
 
-public class Polygon {
+public class Polygon extends Shape {
 
         private final Point[] points;
-        private final Style style;
-
 
     public Polygon(Point[] points) {
 
@@ -14,14 +12,13 @@ public class Polygon {
     }
     public Polygon(Point[] points, Style style) {
 
-        this.points=new Point[points.length];
-        this.style=style;
-        for(int i=0; i< points.length; ++i) {
-            this.points[i] = new Point(points[i]);
-        }
+        this.points = new Point[points.length];
+        this.style = style;
+
+        for(int i = 0; i < points.length; ++i) this.points[i] = new Point(points[i]);
 
     }
-    public Polygon(Polygon p){
+    public Polygon(Polygon p) {
 
         this(p.points);
 
@@ -47,6 +44,7 @@ public class Polygon {
         return "Polygon{" + "array=" + Arrays.toString(points) + '}';
 
     }
+    @Override
     public String toSvg(){
 
         StringBuilder pointString = new StringBuilder();

@@ -4,12 +4,12 @@ import java.util.Locale;
 
 public class SvgScene {
 
-        private final Polygon[] polygons = new Polygon[3];
+        private final Shape[] shapes = new Shape[3];
         private int index = 0;
 
-    public void addPolygon(Polygon arg) {
+    public void addShape(Shape arg) {
 
-        polygons[index] = arg;
+        shapes[index] = arg;
         index++;
         if(index == 3) index = 0;
 
@@ -18,7 +18,7 @@ public class SvgScene {
     public String toSvg() {
 
         StringBuilder polygonsString  = new StringBuilder();
-        for(var polygon: polygons) {
+        for(var polygon: shapes) {
 
             polygonsString.append(polygon.toSvg()).append("\n");
 
