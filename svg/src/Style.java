@@ -1,5 +1,3 @@
-import java.util.Locale;
-
 public class Style {
 
         public final String fillColor, strokeColor;
