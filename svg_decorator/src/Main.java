@@ -1367,7 +1367,9 @@ I had virtually no rehearsal for that.
         */
 
 public class Main {
+
     public static void main(String[] args) throws IOException {
+
         Polygon triangle = new Polygon(new Vec2[]{
                 new Vec2(0, 0),
                 new Vec2(300, 0),
@@ -1409,6 +1411,7 @@ public class Main {
         scene.addShape(pentagon);
         scene.addShape(ellipse);
         scene.save("/home/student/Pulpit/result.svg"); // Chicken! *explodes*
+
     }
 
 }
